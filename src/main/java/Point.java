@@ -23,17 +23,29 @@ public class Point {
   private static final double MEAN_EARTH_RADIUS = 6.371009e+6;
 
   // TODO: Create a stub for the constructor
+  public point(double x, double y, ZonedDateTime timestamp) {
+    
+  }
 
   // TODO: Create a stub for getTime()
-  public ZonedDateTime getTime() {
-    return 0;
+  public ZonedDateTime GetTimeStamp() {
+    return GetTimeStamp;
   }
 
   // TODO: Create a stub for getLatitude()
+  public double getLatitude() {
+    return getLatitude;
+  }
 
   // TODO: Create a stub for getLongitude()
+  public double getLongitude() {
+    return getLongitude;
+  }
 
   // TODO: Create a stub for getElevation()
+  public double getElevation() {
+    return getElevation;
+  }
 
   // TODO: Create a stub for toString()
 
