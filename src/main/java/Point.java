@@ -7,6 +7,8 @@ import static java.lang.Math.sin;
 import static java.lang.Math.sqrt;
 import static java.lang.Math.toRadians;
 
+import java.security.Policy;
+
 
 /**
  * Represents a point in space and time, recorded by a GPS sensor.
@@ -23,31 +25,34 @@ public class Point {
   private static final double MEAN_EARTH_RADIUS = 6.371009e+6;
 
   // TODO: Create a stub for the constructor
-  public point(double x, double y, ZonedDateTime timestamp) {
+  public Point(ZonedDateTime t,double lon,double lat,double elev) {
     
   }
 
   // TODO: Create a stub for getTime()
-  public ZonedDateTime GetTimeStamp() {
-    return GetTimeStamp;
+  public ZonedDateTime GetTime() {
+    return null;
   }
 
   // TODO: Create a stub for getLatitude()
   public double getLatitude() {
-    return getLatitude;
+    return 0;
   }
 
   // TODO: Create a stub for getLongitude()
   public double getLongitude() {
-    return getLongitude;
+    return 0;
   }
 
   // TODO: Create a stub for getElevation()
   public double getElevation() {
-    return getElevation;
+    return 0;
   }
 
   // TODO: Create a stub for toString()
+  public String toString() {
+    return null;
+  }
 
   // IMPORTANT: Do not alter anything beneath this comment!
 
