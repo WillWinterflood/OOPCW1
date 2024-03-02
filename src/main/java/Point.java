@@ -24,24 +24,44 @@ public class Point {
   private static final double MAX_LATITUDE = 90.0;
   private static final double MEAN_EARTH_RADIUS = 6.371009e+6;
 
+  private ZonedDateTime t;
+  private double lon;
+  private double lat;
+  private double elev;
+
+
   // TODO: Create a stub for the constructor
   public Point(ZonedDateTime t,double lon,double lat,double elev) {
+
+    this.t = t;
+    this.lat = lat;
+    this.lon = lon;
+    this.elev = elev;
     
   }
 
   // TODO: Create a stub for getTime()
-  public ZonedDateTime GetTime() {
-    return null;
+  public ZonedDateTime getTime() {
+
+    return t;
   }
 
   // TODO: Create a stub for getLatitude()
   public double getLatitude() {
-    return 0;
+    if (lat < -90.0 || lat > 90.0 ) {
+      throw new IllegalArgumentException("Invalid Latitude value");
+    }
+
+    return lat;
   }
 
   // TODO: Create a stub for getLongitude()
   public double getLongitude() {
-    return 0;
+    if (lon < -180.0 || lon > 180.0) {
+      
+      throw new IllegalArgumentException("Invalid Longitude value");
+    }
+    return lon;
   }
 
   // TODO: Create a stub for getElevation()
@@ -51,7 +71,7 @@ public class Point {
 
   // TODO: Create a stub for toString()
   public String toString() {
-    return null;
+    return String.format("%01d:%01d:%01d", t, lon, lat, elev);
   }
 
   // IMPORTANT: Do not alter anything beneath this comment!
