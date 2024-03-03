@@ -63,15 +63,16 @@ public class Point {
     }
     return lon;
   }
+  
 
   // TODO: Create a stub for getElevation()
   public double getElevation() {
-    return 0;
+    return elev;
   }
 
   // TODO: Create a stub for toString()
   public String toString() {
-    return String.format("(%.5f, %.5f), %.5f", lon, lat, elev);
+    return String.format("(%.5f, %.5f), %.1f m", lon, lat, elev);
   }
 
   // IMPORTANT: Do not alter anything beneath this comment!

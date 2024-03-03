@@ -4,18 +4,24 @@
  * @author YOUR NAME
  */
 public class Track {
+  private String PointData;
+
   // TODO: Create a stub for the constructor
   public Track()  {
-    
+    PointData = "";
+  
+
   }
 
   public Track (String filename) {
+    readFile(filename);
+
 
   }
 
   // TODO: Create a stub for readFile()
   public void readFile(String filename) {
- 
+    return File;
   }
 
   // TODO: Create a stub for add()
