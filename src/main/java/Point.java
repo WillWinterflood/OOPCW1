@@ -49,7 +49,7 @@ public class Point {
   // TODO: Create a stub for getLatitude()
   public double getLatitude() {
     if (lat < -90.0 || lat > 90.0 ) {
-      throw new IllegalArgumentException("Invalid Latitude value");
+      throw new GPSException("Invalid Latitude value");
     }
 
     return lat;
@@ -59,7 +59,7 @@ public class Point {
   public double getLongitude() {
     if (lon < -180.0 || lon > 180.0) {
       
-      throw new IllegalArgumentException("Invalid Longitude value");
+      throw new GPSException("Invalid Longitude value");
     }
     return lon;
   }
@@ -71,7 +71,7 @@ public class Point {
 
   // TODO: Create a stub for toString()
   public String toString() {
-    return String.format("%01d:%01d:%01d", t, lon, lat, elev);
+    return String.format("(%.5f, %.5f), %.5f", lon, lat, elev);
   }
 
   // IMPORTANT: Do not alter anything beneath this comment!

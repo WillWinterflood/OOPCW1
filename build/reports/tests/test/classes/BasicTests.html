@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.145s</div>
+<div class="counter">0.394s</div>
 <p>duration</p>
 </div>
 </td>
@@ -416,16 +416,16 @@ Expected: a numeric value within &lt;1.0E-6&gt; of &lt;72.5&gt;
 <span class="code">
 <pre>org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (4 failures)
 	java.lang.AssertionError: 
-Expected: is &lt;Point@22d7b4f8&gt;
+Expected: is &lt;(-1.54772, 53.80394), 69.80000&gt;
      but: was null
 	java.lang.AssertionError: 
-Expected: is &lt;Point@149dd36b&gt;
+Expected: is &lt;(-1.54853, 53.80462), 72.50000&gt;
      but: was null
 	java.lang.AssertionError: 
-Expected: is &lt;Point@38831718&gt;
+Expected: is &lt;(-1.54942, 53.80524), 68.10000&gt;
      but: was null
 	java.lang.AssertionError: 
-Expected: is &lt;Point@2c1156a7&gt;
+Expected: is &lt;(-1.55083, 53.80547), 70.50000&gt;
      but: was null
 	at app//org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
 	at app//org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
@@ -517,7 +517,7 @@ Expected: is &lt;Point@2c1156a7&gt;
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 	Suppressed: java.lang.AssertionError: 
-Expected: is &lt;Point@22d7b4f8&gt;
+Expected: is &lt;(-1.54772, 53.80394), 69.80000&gt;
      but: was null
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -533,7 +533,7 @@ Expected: is &lt;Point@22d7b4f8&gt;
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 88 more
 	Suppressed: java.lang.AssertionError: 
-Expected: is &lt;Point@149dd36b&gt;
+Expected: is &lt;(-1.54853, 53.80462), 72.50000&gt;
      but: was null
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -549,7 +549,7 @@ Expected: is &lt;Point@149dd36b&gt;
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 88 more
 	Suppressed: java.lang.AssertionError: 
-Expected: is &lt;Point@38831718&gt;
+Expected: is &lt;(-1.54942, 53.80524), 68.10000&gt;
      but: was null
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -565,7 +565,7 @@ Expected: is &lt;Point@38831718&gt;
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 88 more
 	Suppressed: java.lang.AssertionError: 
-Expected: is &lt;Point@2c1156a7&gt;
+Expected: is &lt;(-1.55083, 53.80547), 70.50000&gt;
      but: was null
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -581,7 +581,7 @@ Expected: is &lt;Point@2c1156a7&gt;
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 88 more
 Cause 1: java.lang.AssertionError: 
-Expected: is &lt;Point@22d7b4f8&gt;
+Expected: is &lt;(-1.54772, 53.80394), 69.80000&gt;
      but: was null
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -684,7 +684,7 @@ Expected: is &lt;Point@22d7b4f8&gt;
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 Cause 2: java.lang.AssertionError: 
-Expected: is &lt;Point@149dd36b&gt;
+Expected: is &lt;(-1.54853, 53.80462), 72.50000&gt;
      but: was null
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -787,7 +787,7 @@ Expected: is &lt;Point@149dd36b&gt;
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 Cause 3: java.lang.AssertionError: 
-Expected: is &lt;Point@38831718&gt;
+Expected: is &lt;(-1.54942, 53.80524), 68.10000&gt;
      but: was null
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -890,7 +890,7 @@ Expected: is &lt;Point@38831718&gt;
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 Cause 4: java.lang.AssertionError: 
-Expected: is &lt;Point@2c1156a7&gt;
+Expected: is &lt;(-1.55083, 53.80547), 70.50000&gt;
      but: was null
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -1485,8 +1485,12 @@ Expected: is &lt;Point@2c1156a7&gt;
 <h3 class="failures">Correct string representation of a Point</h3>
 <span class="code">
 <pre>org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (2 failures)
-	java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime
-	java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime
+	java.lang.AssertionError: 
+Expected: is &quot;(-1.54772, 53.80394), 69.8 m&quot;
+     but: was &quot;(-1.54772, 53.80394), 69.80000&quot;
+	java.lang.AssertionError: 
+Expected: is &quot;(-1.54853, 53.80462), 72.5 m&quot;
+     but: was &quot;(-1.54853, 53.80462), 72.50000&quot;
 	at app//org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
 	at app//org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
 	at app//org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:38)
@@ -1576,14 +1580,11 @@ Expected: is &lt;Point@2c1156a7&gt;
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-	Suppressed: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime
-		at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4426)
-		at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2938)
-		at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:2892)
-		at java.base/java.util.Formatter.format(Formatter.java:2673)
-		at java.base/java.util.Formatter.format(Formatter.java:2609)
-		at java.base/java.lang.String.format(String.java:2897)
-		at Point.toString(Point.java:74)
+	Suppressed: java.lang.AssertionError: 
+Expected: is &quot;(-1.54772, 53.80394), 69.8 m&quot;
+     but: was &quot;(-1.54772, 53.80394), 69.80000&quot;
+		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 		at BasicTests.lambda$pointAsString$12(BasicTests.java:114)
 		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
 		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
@@ -1595,14 +1596,11 @@ Expected: is &lt;Point@2c1156a7&gt;
 		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 88 more
-	Suppressed: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime
-		at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4426)
-		at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2938)
-		at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:2892)
-		at java.base/java.util.Formatter.format(Formatter.java:2673)
-		at java.base/java.util.Formatter.format(Formatter.java:2609)
-		at java.base/java.lang.String.format(String.java:2897)
-		at Point.toString(Point.java:74)
+	Suppressed: java.lang.AssertionError: 
+Expected: is &quot;(-1.54853, 53.80462), 72.5 m&quot;
+     but: was &quot;(-1.54853, 53.80462), 72.50000&quot;
+		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 		at BasicTests.lambda$pointAsString$13(BasicTests.java:115)
 		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
 		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
@@ -1614,14 +1612,11 @@ Expected: is &lt;Point@2c1156a7&gt;
 		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 88 more
-Cause 1: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime
-	at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4426)
-	at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2938)
-	at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:2892)
-	at java.base/java.util.Formatter.format(Formatter.java:2673)
-	at java.base/java.util.Formatter.format(Formatter.java:2609)
-	at java.base/java.lang.String.format(String.java:2897)
-	at Point.toString(Point.java:74)
+Cause 1: java.lang.AssertionError: 
+Expected: is &quot;(-1.54772, 53.80394), 69.8 m&quot;
+     but: was &quot;(-1.54772, 53.80394), 69.80000&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at BasicTests.lambda$pointAsString$12(BasicTests.java:114)
 	at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
@@ -1720,14 +1715,11 @@ Cause 1: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTim
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Cause 2: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime
-	at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4426)
-	at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2938)
-	at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:2892)
-	at java.base/java.util.Formatter.format(Formatter.java:2673)
-	at java.base/java.util.Formatter.format(Formatter.java:2609)
-	at java.base/java.lang.String.format(String.java:2897)
-	at Point.toString(Point.java:74)
+Cause 2: java.lang.AssertionError: 
+Expected: is &quot;(-1.54853, 53.80462), 72.5 m&quot;
+     but: was &quot;(-1.54853, 53.80462), 72.50000&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at BasicTests.lambda$pointAsString$13(BasicTests.java:115)
 	at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
@@ -2904,109 +2896,109 @@ Expected: is &lt;4&gt;
 <tr>
 <td class="failures">Elevation stored and retrieved correctly</td>
 <td class="failures">elevation()</td>
-<td class="failures">0.005s</td>
+<td class="failures">0.011s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">Points stored in and retrieved from a Track correctly</td>
 <td class="failures">getPoint()</td>
-<td class="failures">0.005s</td>
+<td class="failures">0.047s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">GPSException when retrieving from an empty Track</td>
 <td class="failures">getPointEmptyDataset()</td>
-<td class="failures">0.003s</td>
+<td class="failures">0.005s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Latitude stored and retrieved correctly</td>
 <td class="success">latitude()</td>
-<td class="success">0.005s</td>
+<td class="success">0.018s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">GPSException if latitude is too high</td>
 <td class="failures">latitudeTooHigh()</td>
-<td class="failures">0.002s</td>
+<td class="failures">0.006s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">GPSException if longitude is too low</td>
 <td class="failures">latitudeTooLow()</td>
-<td class="failures">0.011s</td>
+<td class="failures">0.061s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Longitude stored and retrieved correctly</td>
 <td class="success">longitude()</td>
-<td class="success">0.002s</td>
+<td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">GPSException if longitude is too high</td>
 <td class="failures">longitudeTooHigh()</td>
-<td class="failures">0.012s</td>
+<td class="failures">0.002s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">GPSException if longitude is too low</td>
 <td class="failures">longitudeTooLow()</td>
-<td class="failures">0.002s</td>
+<td class="failures">0.012s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">Correct string representation of a Point</td>
 <td class="failures">pointAsString()</td>
-<td class="failures">0.067s</td>
+<td class="failures">0.106s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">GPSException if index is too high</td>
 <td class="failures">pointIndexTooHigh()</td>
-<td class="failures">0.002s</td>
+<td class="failures">0.050s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">GPSException if index is too low</td>
 <td class="failures">pointIndexTooLow()</td>
-<td class="failures">0.002s</td>
+<td class="failures">0.008s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">Old data cleared when reading a new file</td>
 <td class="failures">readClearOldData()</td>
-<td class="failures">0.009s</td>
+<td class="failures">0.002s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">Points read into a Track correctly</td>
 <td class="failures">readFile()</td>
-<td class="failures">0.006s</td>
+<td class="failures">0.015s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">Appropriate exception if data file does not exist</td>
 <td class="failures">readFileNotFound()</td>
-<td class="failures">0.002s</td>
+<td class="failures">0.010s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="failures">GPSException if data file has fewer than 4 columns</td>
 <td class="failures">readMissingData()</td>
-<td class="failures">0.002s</td>
+<td class="failures">0.009s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Time stored and retrieved correctly</td>
 <td class="success">time()</td>
-<td class="success">0.004s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="failures">Size of a Track returned correctly</td>
 <td class="failures">trackSize()</td>
-<td class="failures">0.004s</td>
+<td class="failures">0.016s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -3019,7 +3011,7 @@ Expected: is &lt;4&gt;
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.6</a> at Mar 2, 2024, 6:13:33 PM</p>
+<a href="http://www.gradle.org">Gradle 8.6</a> at Mar 3, 2024, 1:08:30 AM</p>
 </div>
 </div>
 </body>

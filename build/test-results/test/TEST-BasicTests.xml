@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BasicTests" tests="18" skipped="0" failures="15" errors="0" timestamp="2024-03-02T18:13:33" hostname="codespaces-d9bb0f" time="0.173">
+<testsuite name="BasicTests" tests="18" skipped="0" failures="15" errors="0" timestamp="2024-03-03T01:08:30" hostname="codespaces-d9bb0f" time="0.482">
   <properties/>
-  <testcase name="Correct string representation of a Point" classname="BasicTests" time="0.067">
-    <failure message="org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (2 failures)&#10;&#9;java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime&#10;&#9;java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime" type="org.gradle.internal.exceptions.DefaultMultiCauseException">org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (2 failures)
-	java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime
-	java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime
+  <testcase name="Correct string representation of a Point" classname="BasicTests" time="0.106">
+    <failure message="org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (2 failures)&#10;&#9;java.lang.AssertionError: &#10;Expected: is &quot;(-1.54772, 53.80394), 69.8 m&quot;&#10;     but: was &quot;(-1.54772, 53.80394), 69.80000&quot;&#10;&#9;java.lang.AssertionError: &#10;Expected: is &quot;(-1.54853, 53.80462), 72.5 m&quot;&#10;     but: was &quot;(-1.54853, 53.80462), 72.50000&quot;" type="org.gradle.internal.exceptions.DefaultMultiCauseException">org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (2 failures)
+	java.lang.AssertionError: 
+Expected: is &quot;(-1.54772, 53.80394), 69.8 m&quot;
+     but: was &quot;(-1.54772, 53.80394), 69.80000&quot;
+	java.lang.AssertionError: 
+Expected: is &quot;(-1.54853, 53.80462), 72.5 m&quot;
+     but: was &quot;(-1.54853, 53.80462), 72.50000&quot;
 	at app//org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
 	at app//org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
 	at app//org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:38)
@@ -94,14 +98,11 @@
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-	Suppressed: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime
-		at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4426)
-		at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2938)
-		at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:2892)
-		at java.base/java.util.Formatter.format(Formatter.java:2673)
-		at java.base/java.util.Formatter.format(Formatter.java:2609)
-		at java.base/java.lang.String.format(String.java:2897)
-		at Point.toString(Point.java:74)
+	Suppressed: java.lang.AssertionError: 
+Expected: is &quot;(-1.54772, 53.80394), 69.8 m&quot;
+     but: was &quot;(-1.54772, 53.80394), 69.80000&quot;
+		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 		at BasicTests.lambda$pointAsString$12(BasicTests.java:114)
 		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
 		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
@@ -113,14 +114,11 @@
 		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 88 more
-	Suppressed: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime
-		at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4426)
-		at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2938)
-		at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:2892)
-		at java.base/java.util.Formatter.format(Formatter.java:2673)
-		at java.base/java.util.Formatter.format(Formatter.java:2609)
-		at java.base/java.lang.String.format(String.java:2897)
-		at Point.toString(Point.java:74)
+	Suppressed: java.lang.AssertionError: 
+Expected: is &quot;(-1.54853, 53.80462), 72.5 m&quot;
+     but: was &quot;(-1.54853, 53.80462), 72.50000&quot;
+		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 		at BasicTests.lambda$pointAsString$13(BasicTests.java:115)
 		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
 		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
@@ -132,14 +130,11 @@
 		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 88 more
-Cause 1: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime
-	at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4426)
-	at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2938)
-	at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:2892)
-	at java.base/java.util.Formatter.format(Formatter.java:2673)
-	at java.base/java.util.Formatter.format(Formatter.java:2609)
-	at java.base/java.lang.String.format(String.java:2897)
-	at Point.toString(Point.java:74)
+Cause 1: java.lang.AssertionError: 
+Expected: is &quot;(-1.54772, 53.80394), 69.8 m&quot;
+     but: was &quot;(-1.54772, 53.80394), 69.80000&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at BasicTests.lambda$pointAsString$12(BasicTests.java:114)
 	at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
@@ -238,14 +233,11 @@ Cause 1: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTim
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Cause 2: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTime
-	at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4426)
-	at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2938)
-	at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:2892)
-	at java.base/java.util.Formatter.format(Formatter.java:2673)
-	at java.base/java.util.Formatter.format(Formatter.java:2609)
-	at java.base/java.lang.String.format(String.java:2897)
-	at Point.toString(Point.java:74)
+Cause 2: java.lang.AssertionError: 
+Expected: is &quot;(-1.54853, 53.80462), 72.5 m&quot;
+     but: was &quot;(-1.54853, 53.80462), 72.50000&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at BasicTests.lambda$pointAsString$13(BasicTests.java:115)
 	at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
@@ -346,8 +338,8 @@ Cause 2: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTim
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Latitude stored and retrieved correctly" classname="BasicTests" time="0.005"/>
-  <testcase name="GPSException if longitude is too low" classname="BasicTests" time="0.011">
+  <testcase name="Latitude stored and retrieved correctly" classname="BasicTests" time="0.018"/>
+  <testcase name="GPSException if longitude is too low" classname="BasicTests" time="0.061">
     <failure message="org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -440,7 +432,7 @@ Cause 2: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTim
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="GPSException when retrieving from an empty Track" classname="BasicTests" time="0.003">
+  <testcase name="GPSException when retrieving from an empty Track" classname="BasicTests" time="0.005">
     <failure message="org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -533,7 +525,7 @@ Cause 2: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTim
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Appropriate exception if data file does not exist" classname="BasicTests" time="0.002">
+  <testcase name="Appropriate exception if data file does not exist" classname="BasicTests" time="0.01">
     <failure message="org.opentest4j.AssertionFailedError: Expected java.io.IOException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected java.io.IOException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -626,7 +618,7 @@ Cause 2: java.util.IllegalFormatConversionException: d != java.time.ZonedDateTim
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Points read into a Track correctly" classname="BasicTests" time="0.006">
+  <testcase name="Points read into a Track correctly" classname="BasicTests" time="0.015">
     <failure message="org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (3 failures)&#10;&#9;java.lang.AssertionError: &#10;Expected: is &lt;4&gt;&#10;     but: was &lt;0&gt;&#10;&#9;java.lang.NullPointerException: &lt;no message&gt;&#10;&#9;java.lang.NullPointerException: &lt;no message&gt;" type="org.gradle.internal.exceptions.DefaultMultiCauseException">org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (3 failures)
 	java.lang.AssertionError: 
 Expected: is &lt;4&gt;
@@ -1065,7 +1057,7 @@ Cause 3: java.lang.NullPointerException
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="GPSException if latitude is too high" classname="BasicTests" time="0.002">
+  <testcase name="GPSException if latitude is too high" classname="BasicTests" time="0.006">
     <failure message="org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -1158,7 +1150,7 @@ Cause 3: java.lang.NullPointerException
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="GPSException if index is too low" classname="BasicTests" time="0.002">
+  <testcase name="GPSException if index is too low" classname="BasicTests" time="0.008">
     <failure message="org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -1251,7 +1243,7 @@ Cause 3: java.lang.NullPointerException
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="GPSException if longitude is too low" classname="BasicTests" time="0.002">
+  <testcase name="GPSException if longitude is too low" classname="BasicTests" time="0.012">
     <failure message="org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -1344,7 +1336,7 @@ Cause 3: java.lang.NullPointerException
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="GPSException if index is too high" classname="BasicTests" time="0.002">
+  <testcase name="GPSException if index is too high" classname="BasicTests" time="0.05">
     <failure message="org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -1437,7 +1429,7 @@ Cause 3: java.lang.NullPointerException
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Elevation stored and retrieved correctly" classname="BasicTests" time="0.005">
+  <testcase name="Elevation stored and retrieved correctly" classname="BasicTests" time="0.011">
     <failure message="org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (2 failures)&#10;&#9;java.lang.AssertionError: &#10;Expected: a numeric value within &lt;1.0E-6&gt; of &lt;69.8&gt;&#10;     but: &lt;0.0&gt; differed by &lt;69.799999&gt; more than delta &lt;1.0E-6&gt;&#10;&#9;java.lang.AssertionError: &#10;Expected: a numeric value within &lt;1.0E-6&gt; of &lt;72.5&gt;&#10;     but: &lt;0.0&gt; differed by &lt;72.499999&gt; more than delta &lt;1.0E-6&gt;" type="org.gradle.internal.exceptions.DefaultMultiCauseException">org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (2 failures)
 	java.lang.AssertionError: 
 Expected: a numeric value within &lt;1.0E-6&gt; of &lt;69.8&gt;
@@ -1774,9 +1766,9 @@ Expected: a numeric value within &lt;1.0E-6&gt; of &lt;72.5&gt;
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Time stored and retrieved correctly" classname="BasicTests" time="0.004"/>
-  <testcase name="Longitude stored and retrieved correctly" classname="BasicTests" time="0.002"/>
-  <testcase name="Size of a Track returned correctly" classname="BasicTests" time="0.004">
+  <testcase name="Time stored and retrieved correctly" classname="BasicTests" time="0.007"/>
+  <testcase name="Longitude stored and retrieved correctly" classname="BasicTests" time="0.009"/>
+  <testcase name="Size of a Track returned correctly" classname="BasicTests" time="0.016">
     <failure message="org.opentest4j.MultipleFailuresError: Multiple Failures (1 failure)&#10;&#9;java.lang.AssertionError: &#10;Expected: is &lt;4&gt;&#10;     but: was &lt;0&gt;" type="org.opentest4j.MultipleFailuresError">org.opentest4j.MultipleFailuresError: Multiple Failures (1 failure)
 	java.lang.AssertionError: 
 Expected: is &lt;4&gt;
@@ -1904,7 +1896,7 @@ Expected: is &lt;4&gt;
 	... 88 more
 </failure>
   </testcase>
-  <testcase name="GPSException if data file has fewer than 4 columns" classname="BasicTests" time="0.002">
+  <testcase name="GPSException if data file has fewer than 4 columns" classname="BasicTests" time="0.009">
     <failure message="org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -1997,7 +1989,7 @@ Expected: is &lt;4&gt;
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Old data cleared when reading a new file" classname="BasicTests" time="0.009">
+  <testcase name="Old data cleared when reading a new file" classname="BasicTests" time="0.002">
     <failure message="java.lang.AssertionError: &#10;Expected: is &lt;4&gt;&#10;     but: was &lt;0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: 
 Expected: is &lt;4&gt;
      but: was &lt;0&gt;
@@ -2090,7 +2082,7 @@ Expected: is &lt;4&gt;
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="GPSException if longitude is too high" classname="BasicTests" time="0.012">
+  <testcase name="GPSException if longitude is too high" classname="BasicTests" time="0.002">
     <failure message="org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected GPSException to be thrown, but nothing was thrown.
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -2183,19 +2175,19 @@ Expected: is &lt;4&gt;
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Points stored in and retrieved from a Track correctly" classname="BasicTests" time="0.005">
-    <failure message="org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (4 failures)&#10;&#9;java.lang.AssertionError: &#10;Expected: is &lt;Point@22d7b4f8&gt;&#10;     but: was null&#10;&#9;java.lang.AssertionError: &#10;Expected: is &lt;Point@149dd36b&gt;&#10;     but: was null&#10;&#9;java.lang.AssertionError: &#10;Expected: is &lt;Point@38831718&gt;&#10;     but: was null&#10;&#9;java.lang.AssertionError: &#10;Expected: is &lt;Point@2c1156a7&gt;&#10;     but: was null" type="org.gradle.internal.exceptions.DefaultMultiCauseException">org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (4 failures)
+  <testcase name="Points stored in and retrieved from a Track correctly" classname="BasicTests" time="0.047">
+    <failure message="org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (4 failures)&#10;&#9;java.lang.AssertionError: &#10;Expected: is &lt;(-1.54772, 53.80394), 69.80000&gt;&#10;     but: was null&#10;&#9;java.lang.AssertionError: &#10;Expected: is &lt;(-1.54853, 53.80462), 72.50000&gt;&#10;     but: was null&#10;&#9;java.lang.AssertionError: &#10;Expected: is &lt;(-1.54942, 53.80524), 68.10000&gt;&#10;     but: was null&#10;&#9;java.lang.AssertionError: &#10;Expected: is &lt;(-1.55083, 53.80547), 70.50000&gt;&#10;     but: was null" type="org.gradle.internal.exceptions.DefaultMultiCauseException">org.gradle.internal.exceptions.DefaultMultiCauseException: Multiple Failures (4 failures)
 	java.lang.AssertionError: 
-Expected: is &lt;Point@22d7b4f8&gt;
+Expected: is &lt;(-1.54772, 53.80394), 69.80000&gt;
      but: was null
 	java.lang.AssertionError: 
-Expected: is &lt;Point@149dd36b&gt;
+Expected: is &lt;(-1.54853, 53.80462), 72.50000&gt;
      but: was null
 	java.lang.AssertionError: 
-Expected: is &lt;Point@38831718&gt;
+Expected: is &lt;(-1.54942, 53.80524), 68.10000&gt;
      but: was null
 	java.lang.AssertionError: 
-Expected: is &lt;Point@2c1156a7&gt;
+Expected: is &lt;(-1.55083, 53.80547), 70.50000&gt;
      but: was null
 	at app//org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
 	at app//org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
@@ -2287,7 +2279,7 @@ Expected: is &lt;Point@2c1156a7&gt;
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 	Suppressed: java.lang.AssertionError: 
-Expected: is &lt;Point@22d7b4f8&gt;
+Expected: is &lt;(-1.54772, 53.80394), 69.80000&gt;
      but: was null
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -2303,7 +2295,7 @@ Expected: is &lt;Point@22d7b4f8&gt;
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 88 more
 	Suppressed: java.lang.AssertionError: 
-Expected: is &lt;Point@149dd36b&gt;
+Expected: is &lt;(-1.54853, 53.80462), 72.50000&gt;
      but: was null
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -2319,7 +2311,7 @@ Expected: is &lt;Point@149dd36b&gt;
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 88 more
 	Suppressed: java.lang.AssertionError: 
-Expected: is &lt;Point@38831718&gt;
+Expected: is &lt;(-1.54942, 53.80524), 68.10000&gt;
      but: was null
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -2335,7 +2327,7 @@ Expected: is &lt;Point@38831718&gt;
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 88 more
 	Suppressed: java.lang.AssertionError: 
-Expected: is &lt;Point@2c1156a7&gt;
+Expected: is &lt;(-1.55083, 53.80547), 70.50000&gt;
      but: was null
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 		at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -2351,7 +2343,7 @@ Expected: is &lt;Point@2c1156a7&gt;
 		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
 		... 88 more
 Cause 1: java.lang.AssertionError: 
-Expected: is &lt;Point@22d7b4f8&gt;
+Expected: is &lt;(-1.54772, 53.80394), 69.80000&gt;
      but: was null
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -2454,7 +2446,7 @@ Expected: is &lt;Point@22d7b4f8&gt;
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 Cause 2: java.lang.AssertionError: 
-Expected: is &lt;Point@149dd36b&gt;
+Expected: is &lt;(-1.54853, 53.80462), 72.50000&gt;
      but: was null
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -2557,7 +2549,7 @@ Expected: is &lt;Point@149dd36b&gt;
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 Cause 3: java.lang.AssertionError: 
-Expected: is &lt;Point@38831718&gt;
+Expected: is &lt;(-1.54942, 53.80524), 68.10000&gt;
      but: was null
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
@@ -2660,7 +2652,7 @@ Expected: is &lt;Point@38831718&gt;
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 Cause 4: java.lang.AssertionError: 
-Expected: is &lt;Point@2c1156a7&gt;
+Expected: is &lt;(-1.55083, 53.80547), 70.50000&gt;
      but: was null
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
