@@ -82,27 +82,30 @@ public class Track {
 
   // TODO: Create a stub for lowestPoint()
   public Point lowestPoint() {
-    Point lowestP = points.get(0);
 
-
-    if (points.size() == 0) {
+    if (points.isEmpty()) {
       throw new GPSException("Track is empty.");
     }
 
-    else {
-      for (int i = 1; i < points.size(); i++) {
-        Point currentP = points.get(i);
+    Point lowestP = points.get(0);
 
-        if (currentP.getElevation() < lowestP.getElevation()) {
-          lowestP = currentP;
-        }
-      } 
-    }
+    for (int i = 1; i < points.size(); i++) {
+      Point currentP = points.get(i);
+
+      if (currentP.getElevation() < lowestP.getElevation()) {
+        lowestP = currentP;
+      }
+    } 
+    
     return lowestP;
   }
 
   // TODO: Create a stub for highestPoint()
   public Point highestPoint() {
+    if (points.isEmpty()) {
+      
+      throw new GPSException("Track is empty");
+    }
     Point highestP = points.get(0);
 
     for (int x = 1; x < points.size(); x++) {
@@ -112,19 +115,48 @@ public class Track {
         highestP = currentHP;
       }
     }
-    if (points.size() == 0) {
-      throw new GPSException("Track is empty.");
-    }
     return highestP;
   }
 
   // TODO: Create a stub for totalDistance()
   public double totalDistance() {
-   return 0; 
+   double totalDistance = 0.0;
+   for (int i = 0; i < points.size() - 1; i++) {
+    Point p1  = points.get(i);
+    Point p2 = points.get(i + 1);
+
+    totalDistance += Point.greatCircleDistance(p1, p2);
+   }
+   return totalDistance;
   }
 
   // TODO: Create a stub for averageSpeed()
   public double averageSpeed() {
-    return 0;
+    if (points.size() < 2) {
+      throw new GPSException ("Not enough points");
+    }
+
+    private double totalDistance = 0.0;
+    private double totalTime = 0.0;
+
+    for (int i = 0; i < points.size(); i++) {
+      Point startPoint = points.get(i);
+      Point endPoint = points.get(i + 1);
+
+      double distance = startPoint.greatCircleDistance(endPoint);
+
+      totalDistance = totalDistance + distance;
+
+      double timeBetweenPoints = endPoint.getTime().until(endPoint.getTime().ChronoUnit.SECONDS);
+      totalTime = totalTime + timeBetweenPoints;
+
+      double averageSpeed = totalDistance / totalTime;
+
+      return averageSpeed;
+    }
+
+
+
   }
+
 }
