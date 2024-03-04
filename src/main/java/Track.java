@@ -37,11 +37,14 @@ public class Track {
     try {
       File file = new File(filename);
   
-      Scanner input = new Scanner(file);
+      input = new Scanner(file);
     
       while (input.hasNextLine()) {
         String line = input.nextLine();
         String[] variables = line.split(",");
+
+
+      }
 
         ZonedDateTime t = ZonedDateTime.parse(variables[0]);
         double lon = Double.valueOf(variables[1]);
@@ -52,13 +55,15 @@ public class Track {
         add(temp);
 
         System.out.printf("%s, (%.5f, %.5f), %.5fn",t , lon, lat, elev);
-      }
+      
 
       input.close();
     }
     catch (FileNotFoundException e) {
       throw new GPSException("Error loading file.");
     }
+   
+
   }
 
   // TODO: Create a stub for add()
@@ -69,8 +74,11 @@ public class Track {
 
   // TODO: Create a stub for get()
   public Point get(int index) {
-    return null;
+    if (index < 0 || index >= points.size()) {
+      throw new GPSException("Invalid index");
+    }
 
+    return points.get(index);
   }
   
 
@@ -121,6 +129,11 @@ public class Track {
   // TODO: Create a stub for totalDistance()
   public double totalDistance() {
    double totalDistance = 0.0;
+
+   if (points.size() < 2) {
+    throw new GPSException ("Less than two points");
+   }
+
    for (int i = 0; i < points.size() - 1; i++) {
     Point p1  = points.get(i);
     Point p2 = points.get(i + 1);
@@ -136,27 +149,24 @@ public class Track {
       throw new GPSException ("Not enough points");
     }
 
-    private double totalDistance = 0.0;
-    private double totalTime = 0.0;
+   double totalDistance = this.totalDistance();
+   double totalTime = 0.0;
 
-    for (int i = 0; i < points.size(); i++) {
+    for (int i = 0; i < points.size() - 1; i++) {
       Point startPoint = points.get(i);
       Point endPoint = points.get(i + 1);
 
-      double distance = startPoint.greatCircleDistance(endPoint);
+      double timeBetweenPoints = startPoint.getTime().until(endPoint.getTime(), ChronoUnit.SECONDS);
 
-      totalDistance = totalDistance + distance;
-
-      double timeBetweenPoints = endPoint.getTime().until(endPoint.getTime().ChronoUnit.SECONDS);
       totalTime = totalTime + timeBetweenPoints;
-
-      double averageSpeed = totalDistance / totalTime;
-
-      return averageSpeed;
     }
 
+    double averageSpeed = totalDistance / totalTime;
 
-
+    return averageSpeed;
   }
 
+
+  
+  
 }
