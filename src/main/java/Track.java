@@ -1,8 +1,14 @@
 /**
  * Represents a point in space and time, recorded by a GPS sensor.
  *
- * @author YOUR NAME
+ * @author 
+ * William Winterflood
  */
+
+import java.time.ZonedDateTime;
+import java.io.File;
+import java.util.Scanner;
+
 public class Track {
   private String PointData;
 
@@ -21,7 +27,25 @@ public class Track {
 
   // TODO: Create a stub for readFile()
   public void readFile(String filename) {
-    return File;
+    Scanner input = new Scanner(filename);
+    
+    while (input.hasNextLine()) {
+      String line = input.nextLine();
+      String[] variables = line.split(",");
+
+      ZonedDateTime t = ZonedDateTime.parse(variables[0]);
+      double lon = Double.valueOf(variables[1]);
+      double lat = Double.valueOf(variables[2]);
+      double elev = Double.valueOf(variables[3]);
+
+      Point temp = new Point(t, lon, lat, elev);
+      add(temp);
+
+      System.out.printf("%d (%.5f, %.5f), %.5fn",t , lon, lat, elev);
+    }
+
+    input.close();
+
   }
 
   // TODO: Create a stub for add()

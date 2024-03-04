@@ -13,7 +13,7 @@ import java.security.Policy;
 /**
  * Represents a point in space and time, recorded by a GPS sensor.
  *
- * @author Nick Efford & YOUR NAME
+ * @author Nick Efford & William Winterflood
  */
 public class Point {
   // Constants useful for bounds checking, etc
@@ -38,8 +38,29 @@ public class Point {
     this.lon = lon;
     this.elev = elev;
     
+    if (lon < MIN_LONGITUDE) {
+      
+      throw new GPSException("Invalid Longitude value");
+      
+    }
+    else if (lon > MAX_LONGITUDE) {
+      
+      throw new GPSException("Invalid Longitude value");
+      
+    }
+    
+    if (lat < MIN_LATITUDE) {
+      
+      throw new GPSException("Invalid Latitude value");
+      
+    }
+    else if (lat > MAX_LATITUDE) {
+      
+      throw new GPSException("Invalid Latitude value");
+      
+    }
+  
   }
-
   // TODO: Create a stub for getTime()
   public ZonedDateTime getTime() {
 
@@ -48,19 +69,12 @@ public class Point {
 
   // TODO: Create a stub for getLatitude()
   public double getLatitude() {
-    if (lat < -90.0 || lat > 90.0 ) {
-      throw new GPSException("Invalid Latitude value");
-    }
 
     return lat;
   }
 
   // TODO: Create a stub for getLongitude()
   public double getLongitude() {
-    if (lon < -180.0 || lon > 180.0) {
-      
-      throw new GPSException("Invalid Longitude value");
-    }
     return lon;
   }
   
