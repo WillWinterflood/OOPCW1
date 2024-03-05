@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FullTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-03-05T14:42:56" hostname="codespaces-d9bb0f" time="0.033">
+<testsuite name="FullTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-03-05T15:56:50" hostname="codespaces-d9bb0f" time="0.043">
   <properties/>
-  <testcase name="GPSException if seeking highest point in an empty Track" classname="FullTests" time="0.01"/>
-  <testcase name="GPSException if seeking lowest point in an empty Track" classname="FullTests" time="0.002"/>
-  <testcase name="Total distance computed correctly" classname="FullTests" time="0.002"/>
-  <testcase name="GPSException if fewer than 2 points when computing average speed" classname="FullTests" time="0.003"/>
-  <testcase name="Lowest point of a Track found correctly" classname="FullTests" time="0.002"/>
+  <testcase name="GPSException if seeking highest point in an empty Track" classname="FullTests" time="0.002"/>
+  <testcase name="GPSException if seeking lowest point in an empty Track" classname="FullTests" time="0.004"/>
+  <testcase name="Total distance computed correctly" classname="FullTests" time="0.001"/>
+  <testcase name="GPSException if fewer than 2 points when computing average speed" classname="FullTests" time="0.004"/>
+  <testcase name="Lowest point of a Track found correctly" classname="FullTests" time="0.003"/>
   <testcase name="Highest point of a Track found correctly" classname="FullTests" time="0.001"/>
-  <testcase name="Average speed computed correctly" classname="FullTests" time="0.002"/>
-  <testcase name="GPSException if fewer than 2 points when computing distance" classname="FullTests" time="0.001"/>
+  <testcase name="Average speed computed correctly" classname="FullTests" time="0.006"/>
+  <testcase name="GPSException if fewer than 2 points when computing distance" classname="FullTests" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

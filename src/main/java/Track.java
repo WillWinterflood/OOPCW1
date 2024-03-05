@@ -8,26 +8,25 @@
 import java.time.ZonedDateTime;
 import java.io.File;
 import java.util.Scanner;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.time.temporal.ChronoUnit;
+import java.io.IOException;
 
 public class Track {
   
-  private List<Point> points;
-  private Scanner input;
+  List<Point> points;
 
 
   // TODO: Create a stub for the constructor
   public Track()  {
-
-    points = new ArrayList<>();
+    points = new ArrayList<Point>();
+    points.clear();
     
   }
 
-  public Track (String filename) {
+  public Track (String filename) throws IOException{
     this();
     readFile(filename);
 
@@ -35,25 +34,22 @@ public class Track {
   }
 
   // TODO: Create a stub for readFile()
-  public void readFile(String filename) {
-    try {
+  public void readFile(String filename) throws IOException {
 
       File file = new File(filename);
+
+      Scanner input = new Scanner(file);
       
       if (!file.exists()) {
         throw new GPSException("File does not exist");
       }
 
-      input = new Scanner(file);
-    
       while (input.hasNextLine()) {
         String line = input.nextLine();
         String[] variables = line.split(",");
 
-        int columns = variables.length;
-
-        if (columns < 4) {
-          throw new GPSException("Not enough columns");
+        if (variables.length != 4) {
+          throw new GPSException("Error: Not enough columns");
         }
         
         ZonedDateTime t = ZonedDateTime.parse(variables[0]);
@@ -70,11 +66,6 @@ public class Track {
       }
       input.close();
 
-
-    }
-    catch (FileNotFoundException e) {
-      throw new GPSException("File not found");
-    }
    
 
 
@@ -91,7 +82,7 @@ public class Track {
   // TODO: Create a stub for get()
   public Point get(int index) {
     if (index < 0 || index >= points.size()) {
-      throw new GPSException("Invalid index");
+      throw new GPSException("Incorrect index");
     }
 
     return points.get(index);
@@ -100,7 +91,8 @@ public class Track {
 
   // TODO: Create a stub for size()
   public int size() {
-    return points.size();
+    int size = points.size();
+    return size;
 
   }
 

@@ -86,7 +86,8 @@ public class Point {
 
   // TODO: Create a stub for toString()
   public String toString() {
-    return String.format("(%.5f, %.5f), %.1f m", lon, lat, elev);
+    String formatData = String.format("(%.5f, %.5f), %.1f m", lon, lat, elev);
+    return formatData;
   }
 
   // IMPORTANT: Do not alter anything beneath this comment!
