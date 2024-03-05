@@ -9,14 +9,13 @@ import java.time.ZonedDateTime;
 import java.io.File;
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.time.temporal.ChronoUnit;
 import java.io.IOException;
 
 public class Track {
   
-  List<Point> points;
+  ArrayList<Point> points;
 
 
   // TODO: Create a stub for the constructor
@@ -27,9 +26,7 @@ public class Track {
   }
 
   public Track (String filename) throws IOException{
-    this();
     readFile(filename);
-
 
   }
 
@@ -70,12 +67,6 @@ public class Track {
 
       }
       input.close();
-
-   
-
-
-
-
   }
   
   // TODO: Create a stub for add()
@@ -129,8 +120,8 @@ public class Track {
     }
     Point highestP = points.get(0);
 
-    for (int x = 1; x < points.size(); x++) {
-      Point currentHP = points.get(x);
+    for (int i = 1; i < points.size(); i++) {
+      Point currentHP = points.get(i);
 
       if (currentHP.getElevation() > highestP.getElevation()) {
         highestP = currentHP;
