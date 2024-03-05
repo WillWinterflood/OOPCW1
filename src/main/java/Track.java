@@ -17,6 +17,8 @@ import java.time.temporal.ChronoUnit;
 public class Track {
   
   private List<Point> points;
+  private Scanner input;
+
 
   // TODO: Create a stub for the constructor
   public Track()  {
@@ -35,37 +37,51 @@ public class Track {
   // TODO: Create a stub for readFile()
   public void readFile(String filename) {
     try {
+
       File file = new File(filename);
-  
+      
+      if (!file.exists()) {
+        throw new GPSException("File does not exist");
+      }
+
       input = new Scanner(file);
     
       while (input.hasNextLine()) {
         String line = input.nextLine();
         String[] variables = line.split(",");
 
+        int columns = variables.length;
 
-      }
-
+        if (columns < 4) {
+          throw new GPSException("Not enough columns");
+        }
+        
         ZonedDateTime t = ZonedDateTime.parse(variables[0]);
-        double lon = Double.valueOf(variables[1]);
-        double lat = Double.valueOf(variables[2]);
-        double elev = Double.valueOf(variables[3]);
+        double lon = Double.parseDouble(variables[1]);
+        double lat = Double.parseDouble(variables[2]);
+        double elev = Double.parseDouble(variables[3]);
+
 
         Point temp = new Point(t, lon, lat, elev);
         add(temp);
 
         System.out.printf("%s, (%.5f, %.5f), %.5fn",t , lon, lat, elev);
-      
 
+      }
       input.close();
+
+
     }
     catch (FileNotFoundException e) {
-      throw new GPSException("Error loading file.");
+      throw new GPSException("File not found");
     }
    
 
-  }
 
+
+
+  }
+  
   // TODO: Create a stub for add()
   public void add(Point point) {
     points.add(point);
