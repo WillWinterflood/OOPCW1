@@ -36,11 +36,15 @@ public class Track {
   // TODO: Create a stub for readFile()
   public void readFile(String filename) throws IOException {
 
+      points.clear();
+      
       File file = new File(filename);
-
       Scanner input = new Scanner(file);
+
+      input.nextLine();
       
       if (!file.exists()) {
+        input.close();
         throw new GPSException("File does not exist");
       }
 
@@ -48,7 +52,8 @@ public class Track {
         String line = input.nextLine();
         String[] variables = line.split(",");
 
-        if (variables.length != 4) {
+        if (variables.length < 4) {
+          input.close();
           throw new GPSException("Error: Not enough columns");
         }
         
